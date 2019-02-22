@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Ordinary | Skincare Products | The Abnormal Beauty Company</title>
+    <link rel="stylesheet" href="css/uikit.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <header role="banner" class="main">
+        <div class="uk-container uk-container-large">
+            <a class="sr-only" href="#main">Skip to Content</a>
+            <nav role="navigation" class="uk-navbar">
+                <div class="uk-navbar-left">
+                    <a href="/" class="uk-navbar-item uk-logo"><img src="imgs/logo.svg" alt="The Ordinary Logo" width="150"></a>
+                </div>
+                <!--Desktop Nav - is hidden on small screens-->
+                <div class="uk-navbar-right navbar-collapse uk-visible@s" id="navbar-collapse">
+                    <ul class="uk-navbar-nav">
+                        <li><a href="">Products</a></li>
+                        <li><a href="">Guides</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Cart</a></li>
+                    </ul>
+                </div>
+                <!--Mobile Nav - is hidden on large screens-->
+                <div class="uk-navbar-right uk-hidden@s">
+                    <a href="#" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+                </div>
+                <div id="sidenav" uk-offcanvas="flip: true; overlay: true" class="uk-offcanvas uk-hidden@s">
+                    <div class="uk-offcanvas-bar">
+                        <button class="uk-offcanvas-close" type="button" uk-close></button>
+                        <ul class="uk-nav">
+                            <li><a href="">Products</a></li>
+                            <li><a href="">Guides</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Cart</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <main role="main">
+        <!--Main Banner Section-->
+        <section id="banner" class="uk-height-large uk-background-cover">
+            <div class="uk-container uk-container-large uk-height-1-1 uk-flex uk-flex-middle uk-flex-center">
+                <div class="uk-width-1-2@s uk-width-1-3@l uk-overlay-default uk-padding">
+                    <h1>The Abnormal Beauty Company</h1>
+                    <p>Est do proident velit eu id mollit fugiat in excepteur minim fugiat veniam nulla esse.</p>
+                    <button class="uk-button uk-button-primary uk-align-center uk-margin-remove-bottom">View Products</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer role="contentinfo">
+
+    </footer>
+
+
+    <script src="js/uikit.min.js" ></script>
+    <script src="js/uikit-icons.min.js" ></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/* ----- Variables ----- */
+:root {
+    --grey: #e0ddd9;
+}
+
+/* ----- Basic and Helper styles ----- */
+body {
+    font-family: 'Raleway', sans-serif;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+.h-40 {
+    height: 40px !important;
+    min-height: 40px;
+}
+
+/* ----- Header ----- */
+header.main {
+    border-bottom: 15px solid var(--grey);
+}
+
+/* ----- Main Banner Section ----- */
+#banner {
+    /* background-color: white; */
+    background-image: url('../imgs/curves.jpg');
+}
