@@ -21,10 +21,11 @@
                 <!--Desktop Nav - is hidden on small screens-->
                 <div class="uk-navbar-right navbar-collapse uk-visible@s" id="navbar-collapse">
                     <ul class="uk-navbar-nav">
-                        <li><a href="">Products</a></li>
-                        <li><a href="">Guides</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Cart</a></li>
+                        <li><a class="uk-navbar-toggle" href="#search-modal" uk-search-icon uk-toggle></a></li>
+                        <li><a href="" class=""><span class="uk-button uk-button-text">Products<span></span></a></li>
+                        <li><a href=""><span class="uk-button uk-button-text">Guides</span></a></li>
+                        <li><a href=""><span class="uk-button uk-button-text">About</span></a></li>
+                        <li><a href=""><span class="uk-button uk-button-text">Cart</span> <span uk-icon="cart"></span></a></li>
                     </ul>
                 </div>
                 <!--Mobile Nav - is hidden on large screens-->
@@ -35,28 +36,125 @@
                     <div class="uk-offcanvas-bar">
                         <button class="uk-offcanvas-close" type="button" uk-close></button>
                         <ul class="uk-nav">
+                            <li><a class="uk-navbar-toggle" href="#search-modal" uk-search-icon uk-toggle></a></li>
                             <li><a href="">Products</a></li>
                             <li><a href="">Guides</a></li>
                             <li><a href="">About</a></li>
-                            <li><a href="">Cart</a></li>
+                            <li><a href="">Cart <span uk-icon="cart"></span></a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
+            <!--Search Modal-->
+            <div id="search-modal" class="uk-modal-full uk-modal" uk-modal>
+                <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport>
+                    <button class="uk-modal-close-full" type="button" uk-close></button>
+                    <form class="uk-search uk-search-large">
+                        <input class="uk-search-input uk-text-center" type="search" placeholder="Search..." autofocus>
+                    </form>
+                </div>
+            </div>
         </div>
     </header>
 
 
-    <main role="main">
+    <main id="main" role="main">
         <!--Main Banner Section-->
         <section id="banner" class="uk-height-large uk-background-cover">
             <div class="uk-container uk-container-large uk-height-1-1 uk-flex uk-flex-middle uk-flex-center">
                 <div class="uk-width-1-2@s uk-width-1-3@l uk-overlay-default uk-padding">
                     <h1>The Abnormal Beauty Company</h1>
                     <p>Est do proident velit eu id mollit fugiat in excepteur minim fugiat veniam nulla esse.</p>
-                    <button class="uk-button uk-button-primary uk-align-center uk-margin-remove-bottom">View Products</button>
+                    <button class="uk-button uk-button-primary uk-align-center uk-margin-remove-bottom">Shop Now</button>
                 </div>
             </div>
+        </section>
+
+        <!--Products Section-->
+        <section id="products" class="uk-padding">
+            <h2 class="uk-text-center">Our Products</h2>
+            <div class="uk-visible-toggle" uk-slider="finite: true">
+                <div class="uk-position-relative">
+                    <div class="uk-slider-container uk-padding">
+                        <ul class="uk-slider-items uk-child-width-1-4@s uk-child-width-1-3@ uk-grid uk-grid-match">
+                            <li>
+                                <a href="" class="">
+                                    <article class="uk-card uk-card-default uk-card-hover">
+                                        <div class="uk-card-media-top">
+                                            <img src="imgs/antioxidants.png" alt="Antioxidants">
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <h3 class="uk-card-title">Antioxidants</h3>
+                                        </div>
+                                    </article>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <article class="uk-card uk-card-default uk-card-hover">
+                                        <div class="uk-card-media-top">
+                                            <img src="imgs/direct-acids.png" alt="Direct Acids">
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <h3 class="uk-card-title">Direct Acids</h3>
+                                        </div>
+                                    </article>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <article class="uk-card uk-card-default uk-card-hover">
+                                        <div class="uk-card-media-top">
+                                            <img src="imgs/hydrators.png" alt="Hydrators & Oils">
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <h3 class="uk-card-title">Hydrators & Oils</h3>
+                                        </div>
+                                    </article>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="r">
+                                    <article class="uk-card uk-card-default uk-card-hover">
+                                        <div class="uk-card-media-top">
+                                            <img src="imgs/retinoids.png" alt="Retinoids">
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <h3 class="uk-card-title">Retinoids</h3>
+                                        </div>
+                                    </article>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <article class="uk-card uk-card-default uk-card-hover">
+                                        <div class="uk-card-media-top">
+                                            <img src="imgs/suncare.png" alt="Suncare">
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <h3 class="uk-card-title">Suncare</h3>
+                                        </div>
+                                    </article>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <article class="uk-card uk-card-default uk-card-hover">
+                                        <div class="uk-card-media-top">
+                                            <img src="imgs/vitamin-c.png" alt="Vitamin C">
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <h3 class="uk-card-title">Vitamin C</h3>
+                                        </div>
+                                    </article>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="uk-position-center-left-out" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right-out" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                </div>
+            </div><!--uk-slider-->
         </section>
 
     </main>

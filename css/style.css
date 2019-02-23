@@ -28,9 +28,45 @@ body {
 header.main {
     border-bottom: 15px solid var(--grey);
 }
+nav a svg {
+    margin-left: 0.5rem;
+}
+.uk-offcanvas-bar {
+    background-color: white;
+}
+.uk-offcanvas-bar a, .uk-offcanvas-bar svg {
+    color: #999;
+}
+.uk-offcanvas-bar a:hover, .uk-offcanvas-bar svg:hover {
+    color: black;
+}
 
 /* ----- Main Banner Section ----- */
 #banner {
     /* background-color: white; */
     background-image: url('../imgs/curves.jpg');
+}
+
+/* ----- Products Section ----- */
+#products ul {
+    /* margin: 0 3rem; */
+}
+#products article {
+    height: 100%;
+    text-align: center;
+}
+#products a {
+    transition: box-shadow .25s;
+    /* min-width: 200px; */
+}
+#products a:not(:first-child) {
+    /* margin-left: 1rem; */
+}
+#products img {
+    width: 150px; 
+}
+#products .uk-card-media-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
