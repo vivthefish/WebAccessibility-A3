@@ -3,6 +3,7 @@
 /* ----- Variables ----- */
 :root {
     --grey: #e0ddd9;
+    --trans-grey: rgba(224, 221, 217, 0.75); 
 }
 
 /* ----- Basic and Helper styles ----- */
@@ -26,7 +27,9 @@ body {
 
 /* ----- Header ----- */
 header.main {
+    background-color: white;
     border-bottom: 15px solid var(--grey);
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
 }
 nav a svg {
     margin-left: 0.5rem;
@@ -48,19 +51,10 @@ nav a svg {
 }
 
 /* ----- Products Section ----- */
-#products ul {
-    /* margin: 0 3rem; */
-}
 #products article {
     height: 100%;
     text-align: center;
-}
-#products a {
     transition: box-shadow .25s;
-    /* min-width: 200px; */
-}
-#products a:not(:first-child) {
-    /* margin-left: 1rem; */
 }
 #products img {
     width: 150px; 
@@ -69,4 +63,25 @@ nav a svg {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#products .disabled {
+    position: relative;
+}
+#products .disabled .uk-panel {
+    opacity: 0;
+    transition: opacity .25s;
+    background-color: var(--trans-grey);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+#products .disabled .uk-panel h4 {
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2rem;
+}
+#products .disabled:hover .uk-panel {
+    opacity: 1;
 }

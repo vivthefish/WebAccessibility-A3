@@ -7,55 +7,62 @@
     <title>The Ordinary | Skincare Products | The Abnormal Beauty Company</title>
     <link rel="stylesheet" href="css/uikit.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <!--
+        Site by Vivian Harvey
+        Target Audience: People who are interested in no-nonsense skincare. Typical customers are North American, female, and over the age of 25.
+    -->
 </head>
 <body>
 
 
-    <header role="banner" class="main">
-        <div class="uk-container uk-container-large">
-            <a class="sr-only" href="#main">Skip to Content</a>
-            <nav role="navigation" class="uk-navbar">
-                <div class="uk-navbar-left">
-                    <a href="/" class="uk-navbar-item uk-logo"><img src="imgs/logo.svg" alt="The Ordinary Logo" width="150"></a>
-                </div>
-                <!--Desktop Nav - is hidden on small screens-->
-                <div class="uk-navbar-right navbar-collapse uk-visible@s" id="navbar-collapse">
-                    <ul class="uk-navbar-nav">
-                        <li><a class="uk-navbar-toggle" href="#search-modal" uk-search-icon uk-toggle></a></li>
-                        <li><a href="" class=""><span class="uk-button uk-button-text">Products<span></span></a></li>
-                        <li><a href=""><span class="uk-button uk-button-text">Guides</span></a></li>
-                        <li><a href=""><span class="uk-button uk-button-text">About</span></a></li>
-                        <li><a href=""><span class="uk-button uk-button-text">Cart</span> <span uk-icon="cart"></span></a></li>
-                    </ul>
-                </div>
-                <!--Mobile Nav - is hidden on large screens-->
-                <div class="uk-navbar-right uk-hidden@s">
-                    <a href="#" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
-                </div>
-                <div id="sidenav" uk-offcanvas="flip: true; overlay: true" class="uk-offcanvas uk-hidden@s">
-                    <div class="uk-offcanvas-bar">
-                        <button class="uk-offcanvas-close" type="button" uk-close></button>
-                        <ul class="uk-nav">
+    <div role="banner" aria-labelledby="#main-title" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+        <header class="main">
+            <div class="uk-container uk-container-large">
+                <a class="sr-only" href="#main">Skip to Content</a>
+                <nav role="navigation" aria-label="Primary" class="uk-navbar">
+                    <div class="uk-navbar-left">
+                        <a href="/" class="uk-navbar-item uk-logo"><img src="imgs/logo.svg" alt="The Ordinary Logo" width="150"><h1 id="main-title" class="sr-only">The Ordinary</h1></a>
+                    </div>
+                    <!--Desktop Nav - is hidden on small screens-->
+                    <div class="uk-navbar-right navbar-collapse uk-visible@s" id="navbar-collapse">
+                        <ul class="uk-navbar-nav">
                             <li><a class="uk-navbar-toggle" href="#search-modal" uk-search-icon uk-toggle></a></li>
-                            <li><a href="">Products</a></li>
-                            <li><a href="">Guides</a></li>
-                            <li><a href="">About</a></li>
-                            <li><a href="">Cart <span uk-icon="cart"></span></a></li>
+                            <li><a href="" class=""><span class="uk-button uk-button-text">Products<span></span></a></li>
+                            <li><a href=""><span class="uk-button uk-button-text">Guides</span></a></li>
+                            <li><a href=""><span class="uk-button uk-button-text">About</span></a></li>
+                            <li><a href=""><span class="uk-button uk-button-text">Cart</span> <span uk-icon="cart"></span></a></li>
                         </ul>
                     </div>
-                </div>
-            </nav>
-            <!--Search Modal-->
-            <div id="search-modal" class="uk-modal-full uk-modal" uk-modal>
-                <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport>
-                    <button class="uk-modal-close-full" type="button" uk-close></button>
-                    <form class="uk-search uk-search-large">
-                        <input class="uk-search-input uk-text-center" type="search" placeholder="Search..." autofocus>
-                    </form>
+                    <!--Mobile Nav - is hidden on large screens-->
+                    <div class="uk-navbar-right uk-hidden@s">
+                        <a href="#" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+                    </div>
+                    <div id="sidenav" uk-offcanvas="flip: true; overlay: true" class="uk-offcanvas uk-hidden@s">
+                        <div class="uk-offcanvas-bar">
+                            <button class="uk-offcanvas-close" type="button" uk-close></button>
+                            <ul class="uk-nav">
+                                <li><a class="uk-navbar-toggle" href="#search-modal" uk-search-icon uk-toggle></a></li>
+                                <li><a href="">Products</a></li>
+                                <li><a href="">Guides</a></li>
+                                <li><a href="">About</a></li>
+                                <li><a href="">Cart <span uk-icon="cart"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!--Search Modal-->
+                <div id="search-modal" class="uk-modal-full uk-modal" uk-modal aria-hidden="true">
+                    <div role="search" class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport>
+                        <button class="uk-modal-close-full" type="button" uk-close></button>
+                        <form class="uk-search uk-search-large uk-text-center">
+                            <label for="search">Search the site</label>
+                            <input class="uk-search-input uk-text-center" name="search" type="search" placeholder="Search..." autofocus>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
+    </div>
 
 
     <main id="main" role="main">
@@ -65,7 +72,7 @@
                 <div class="uk-width-1-2@s uk-width-1-3@l uk-overlay-default uk-padding">
                     <h1>The Abnormal Beauty Company</h1>
                     <p>Est do proident velit eu id mollit fugiat in excepteur minim fugiat veniam nulla esse.</p>
-                    <button class="uk-button uk-button-primary uk-align-center uk-margin-remove-bottom">Shop Now</button>
+                    <button class="uk-button uk-button-primary uk-align-center uk-margin-remove-bottom">Learn More</button>
                 </div>
             </div>
         </section>
@@ -76,7 +83,7 @@
             <div class="uk-visible-toggle" uk-slider="finite: true">
                 <div class="uk-position-relative">
                     <div class="uk-slider-container uk-padding">
-                        <ul class="uk-slider-items uk-child-width-1-4@s uk-child-width-1-3@ uk-grid uk-grid-match">
+                        <ul role="navigation" aria-label="secondary" class="uk-slider-items uk-child-width-1-4@s uk-child-width-1-3@ uk-grid uk-grid-match">
                             <li>
                                 <a href="" class="">
                                     <article class="uk-card uk-card-default uk-card-hover">
@@ -126,7 +133,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="">
+                                <a class="disabled" aria-disabled="true">
                                     <article class="uk-card uk-card-default uk-card-hover">
                                         <div class="uk-card-media-top">
                                             <img src="imgs/suncare.png" alt="Suncare">
@@ -135,6 +142,9 @@
                                             <h3 class="uk-card-title">Suncare</h3>
                                         </div>
                                     </article>
+                                    <div class="uk-position-center uk-panel">
+                                        <h4 class="">Coming Soon!</h4>
+                                    </div>
                                 </a>
                             </li>
                             <li>
@@ -151,8 +161,12 @@
                             </li>
                         </ul>
                     </div>
-                    <a class="uk-position-center-left-out" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                    <a class="uk-position-center-right-out" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                    <a role="button" class="uk-position-center-left-out" href="#" uk-slidenav-previous uk-slider-item="previous">
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a role="button" class="uk-position-center-right-out" href="#" uk-slidenav-next uk-slider-item="next">
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div><!--uk-slider-->
         </section>
