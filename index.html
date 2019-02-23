@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex" />
     <title>The Ordinary | Skincare Products | The Abnormal Beauty Company</title>
     <link rel="stylesheet" href="css/uikit.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!--
         Site by Vivian Harvey
         Target Audience: People who are interested in no-nonsense skincare. Typical customers are North American, female, and over the age of 25.
+        All Content, Images and branding are copywrite 2019 The Ordinary (https://theordinary.com/)
     -->
 </head>
 <body>
@@ -171,11 +173,66 @@
             </div><!--uk-slider-->
         </section>
 
+        <!--New Product Section-->
+        <section id="new" class="uk-height-large uk-position-relative">
+            <article class="uk-position-center uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                <div class="uk-flex-last@s uk-card-media-right uk-background-muted">
+                    <div class="img-col">
+                        <img src="imgs/no-brainer-set.png" alt="No-Brainer set" width="250">
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card-body uk-position-relative">
+                        <p class="uk-text-lead">New!</p>
+                        <h2 class="">Introducing the No-Brainer Set</h2>
+                        <p>Pariatur do laborum officia in eiusmod non minim.</p>
+                        <button class="uk-button uk-button-primary uk-margin-remove-bottom">Shop Now</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!--Newsletter Section-->
+        <section id="newsletter" class="uk-section uk-section-medium  uk-position-relative">
+            <div class="uk-container uk-container-large uk-padding uk-flex uk-flex-center">
+                <form action="" class="uk-width-1-2@s">
+                    <fieldset class="uk-fieldset">
+                        <legend class="uk-legend uk-text-center uk-heading-divider">Sign up for Our Newsletter</legend>
+                        <div class="uk-margin">
+                            <label for="name">Your Name:</label>
+                            <input name="name" type="text" class="uk-input">
+                        </div>
+                        <div class="uk-margin">
+                            <label for="email">Your Email:</label>
+                            <input name="email" type="email" class="uk-input" placeholder="hello@example.com">
+                        </div>
+                        <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                            <label><input class="uk-radio" type="radio" name="radio2" checked> Also send me new Offers!</label>
+                            <label><input class="uk-radio" type="radio" name="radio2"> Just the Newsletter</label>
+                        </div>
+                        <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                            <label><input class="uk-checkbox" type="checkbox"> I agree to the Terms and Conditions</label>
+                        </div>
+                        <div class="uk-margin">
+                            <button class="uk-button uk-button-primary uk-align-center" type="submit">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
     </main>
 
 
-    <footer role="contentinfo">
-
+    <footer class="main" role="contentinfo">
+        <div class="uk-container uk-container-large uk-padding">
+            <ul class="uk-list">
+                <li><a href=""><span class="uk-button uk-button-text">FAQ</span></a></li>
+                <li><a href=""><span class="uk-button uk-button-text">Contact</span></a></li>
+                <li><a href=""><span class="uk-button uk-button-text">Privacy</span></a></li>
+                <li><a href=""><span class="uk-button uk-button-text">Terms & Conditions</span></a></li>
+            </ul>
+            <p class="uk-text-center"><small>&copy; 2019 Created by Vivian Harvey for COMP1074. All content &copy; 2019 <a href="https://theordinary.com/">The Ordinary</a>.</small></p>
+        </div>
     </footer>
 
 
