@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/uikit.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!--
-        Site by Vivian Harvey
+        Site by Vivian Harvey for COMP1074 - Assignment 3
         Target Audience: People who are interested in no-nonsense skincare. Typical customers are North American, female, and over the age of 25.
         All Content, Images and branding are copywrite 2019 The Ordinary (https://theordinary.com/)
     -->
@@ -26,20 +26,20 @@
                         <a href="/" class="uk-navbar-item uk-logo"><img src="imgs/logo.svg" alt="The Ordinary Logo" width="150"><h1 id="main-title" class="sr-only">The Ordinary</h1></a>
                     </div>
                     <!--Desktop Nav - is hidden on small screens-->
-                    <div class="uk-navbar-right navbar-collapse uk-visible@s" id="navbar-collapse">
+                    <div class="uk-navbar-right navbar-collapse uk-visible@s" id="navbar-collapse" aria-expanded="true">
                         <ul class="uk-navbar-nav">
                             <li><a class="uk-navbar-toggle" href="#search-modal" uk-search-icon uk-toggle></a></li>
-                            <li><a href="" class=""><span class="uk-button uk-button-text">Products<span></span></a></li>
+                            <li><a href="" class=""><span class="uk-button uk-button-text">Products</span></a></li>
                             <li><a href=""><span class="uk-button uk-button-text">Guides</span></a></li>
                             <li><a href=""><span class="uk-button uk-button-text">About</span></a></li>
-                            <li><a href=""><span class="uk-button uk-button-text">Cart</span> <span uk-icon="cart"></span></a></li>
+                            <li><a href="" aria-live="true"><span class="uk-button uk-button-text">Cart</span> <span uk-icon="cart"></span></a></li>
                         </ul>
                     </div>
                     <!--Mobile Nav - is hidden on large screens-->
                     <div class="uk-navbar-right uk-hidden@s">
                         <a href="#" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
                     </div>
-                    <div id="sidenav" uk-offcanvas="flip: true; overlay: true" class="uk-offcanvas uk-hidden@s">
+                    <div id="sidenav" uk-offcanvas="flip: true; overlay: true" class="uk-offcanvas uk-hidden@s" aria-hidden="true">
                         <div class="uk-offcanvas-bar">
                             <button class="uk-offcanvas-close" type="button" uk-close></button>
                             <ul class="uk-nav">
@@ -47,7 +47,7 @@
                                 <li><a href="">Products</a></li>
                                 <li><a href="">Guides</a></li>
                                 <li><a href="">About</a></li>
-                                <li><a href="">Cart <span uk-icon="cart"></span></a></li>
+                                <li><a href="" aria-live="true">Cart <span uk-icon="cart"></span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -60,6 +60,7 @@
                             <label for="search">Search the site</label>
                             <input class="uk-search-input uk-text-center" name="search" type="search" placeholder="Search..." autofocus>
                         </form>
+                        <div id="search-rsults" aria-live="true"></div>
                     </div>
                 </div>
             </div>
@@ -175,7 +176,7 @@
 
         <!--New Product Section-->
         <section id="new" class="uk-height-large uk-position-relative">
-            <article class="uk-position-center uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+            <article class="uk-position-center uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid  aria-live="true">
                 <div class="uk-flex-last@s uk-card-media-right uk-background-muted">
                     <div class="img-col">
                         <img src="imgs/no-brainer-set.png" alt="No-Brainer set" width="250">
@@ -200,18 +201,18 @@
                         <legend class="uk-legend uk-text-center uk-heading-divider">Sign up for Our Newsletter</legend>
                         <div class="uk-margin">
                             <label for="name">Your Name:</label>
-                            <input name="name" type="text" class="uk-input">
+                            <input id="name" name="name" type="text" class="uk-input" required aria-required="true">
                         </div>
                         <div class="uk-margin">
                             <label for="email">Your Email:</label>
-                            <input name="email" type="email" class="uk-input" placeholder="hello@example.com">
+                            <input id="email" name="email" type="email" class="uk-input" placeholder="hello@example.com" required aria-required="true">
                         </div>
                         <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-                            <label><input class="uk-radio" type="radio" name="radio2" checked> Also send me new Offers!</label>
+                            <label><input class="uk-radio" type="radio" name="radio2" checked aria-checked="true"> Also send me new Offers!</label>
                             <label><input class="uk-radio" type="radio" name="radio2"> Just the Newsletter</label>
                         </div>
                         <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-                            <label><input class="uk-checkbox" type="checkbox"> I agree to the Terms and Conditions</label>
+                            <label><input class="uk-checkbox" type="checkbox" required aria-required="true"> I agree to the Terms and Conditions</label>
                         </div>
                         <div class="uk-margin">
                             <button class="uk-button uk-button-primary uk-align-center" type="submit">Submit</button>
